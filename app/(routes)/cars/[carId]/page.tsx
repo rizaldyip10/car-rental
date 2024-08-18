@@ -7,7 +7,7 @@ import { CarsType } from "@/constants/type/cars-type";
 const CarDetailPage = async (
     { params }: { params: { carId: string } }
 ) => {
-    const { data } = await axios.get(`${process.env.NEXT_APP_URL}/api/cars/${params.carId}`);
+    const { data } = await axios.get(`${process.env.NEXT_APP_URL!}/api/cars/${params.carId}`);
     const car = data.car as CarsType;
     return (
         <div className="w-full flex flex-col gap-14">

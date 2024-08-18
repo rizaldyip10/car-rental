@@ -29,7 +29,7 @@ const SignupForm = () => {
     const handleLogin = async (value: FormikValues) => {
         const loadingToast = toast.loading("Loading...")
         try {
-            const response = await axios.post('/api/auth/sign-up', value);
+            const response = await axios.post(`${process.env.NEXT_APP_URL!}/api/auth/sign-up`, value);
             toast.dismiss(loadingToast);
             toast.success("Register success!");
             router.push("/sign-in");
