@@ -15,7 +15,7 @@ export const useCarList = (limit: number = 6) => {
     } = useInfiniteQuery({
         queryKey: ["get-car-list"],
         queryFn: async ({ pageParam }) => {
-            const { data } = await axios.get(`${process.env.NEXT_APP_URL!}/api/cars`, {
+            const { data } = await axios.get(`/api/cars`, {
                 params: {
                     limit,
                     page: pageParam
