@@ -4,7 +4,7 @@ import NavbarItems from './navbar-items'
 
 const routes: NavRoutesType[] = [
     { label: "Home", href: "/" },
-    { label: "Vehicles", href: "/vehicles" },
+    { label: "Cars", href: "/cars" },
     { label: "About Us", href: "/about-us" },
     { label: "Contact Us", href: "/contact" }
 ]

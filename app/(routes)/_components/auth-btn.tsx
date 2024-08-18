@@ -1,25 +1,13 @@
-import { Button } from "@/components/ui/button"
-import { SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs"
+import SigninBtn from "./siginin-btn"
+import SignupBtn from "./signup-btn"
 
 
 const AuthBtn = () => {
     return (
-        <>
-            <SignedOut>
-                <div className="flex items-center gap-2">
-                    <Button variant="ghost">
-                        <SignInButton />
-                    </Button>
-                    <Button>
-                        <SignUpButton />
-                    </Button>
-                </div>
-            </SignedOut>
-
-            <SignedIn>
-                <UserButton />
-            </SignedIn>
-        </>
+        <div className="flex items-center gap-2">
+            <SigninBtn />
+            <SignupBtn />
+        </div>
     )
 }
 
