@@ -19,7 +19,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                 password: { label: "Password", type: "password" }
             },
             async authorize(credentials) {
-                const { data, status } = await axios.post(`/api/auth/sign-in`, 
+                const { data, status } = await axios.post(`${process.env.NEXT_APP_URL}/api/auth/sign-in`, 
                     {
                     email: credentials.username,
                     password: credentials.password
